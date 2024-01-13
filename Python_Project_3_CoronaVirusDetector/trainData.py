@@ -14,7 +14,7 @@ def data_split(data,ratio):
 if __name__ == '__main__':
 
     # Read CSV file
-    df = pd.read_csv('Python_Project/Python_Project_3_CoronaVirusDetector/data.csv')
+    df = pd.read_csv('data.csv')
 
     # split train and test Data
     train, test = data_split(df, 0.2)
@@ -34,7 +34,7 @@ if __name__ == '__main__':
     clf.fit(X_train, Y_train)
 
     #open file where you can save data
-    with open("Python_Project/Python_Project_3_CoronaVirusDetector/model.pkl","wb") as file:
+    with open("model.pkl","wb") as file:
         #dump info to that file
         pickle.dump(clf,file)
 
