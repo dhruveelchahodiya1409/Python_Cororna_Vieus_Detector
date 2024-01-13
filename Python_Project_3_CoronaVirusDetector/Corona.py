@@ -5,7 +5,7 @@ from flask import Flask,render_template , request
 app = Flask(__name__)
 
 
-with open("Python_Project/Python_Project_3_CoronaVirusDetector/model.pkl","rb") as file:
+with open("model.pkl","rb") as file:
     clf = pickle.load(file)
 @app.route('/',methods=['GET','POST'])
 def hello_world():
